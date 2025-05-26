@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulare Politici de Ocupare România 2016-2030</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🇷🇴 Simulare Politici de Ocupare România 2016-2030</h1>
+            <p>Analiza impactului reformei educaționale asupra șomajului în rândul tinerilor</p>
+        </div>
+        
+        <div class="tabs">
+            <button class="tab active" onclick="showTab('simulation')">📊 Simulări</button>
+            <button class="tab" onclick="showTab('impact')">💰 Impact Economic</button>
+            <button class="tab" onclick="showTab('analysis')">📝 Analiză</button>
+        </div>
+        
+        <div class="content">
+            <!-- Tab Simulări -->
+            <div id="simulation" class="tab-content active">
+                <div class="chart-container">
+                    <h2 class="chart-title">Evoluția Ratei de Ocupare (15-24 ani)</h2>
+                    <canvas id="employmentChart" width="400" height="200"></canvas>
+                </div>
+                
+                <div class="chart-container">
+                    <h2 class="chart-title">Evoluția Ratei de Șomaj (15-24 ani)</h2>
+                    <canvas id="unemploymentChart" width="400" height="200"></canvas>
+                </div>
+                
+                <div class="comparison-cards">
+                    <div class="card negative">
+                        <h3>🚫 FĂRĂ Reformă Educațională 2030</h3>
+                        <div class="big-number">17.8%</div>
+                        <p>Rata de ocupare</p>
+                        <div class="big-number">49.1%</div>
+                        <p>Rata de șomaj</p>
+                        <p style="margin-top: 15px; opacity: 0.9;">Stagnare și deteriorare a situației tinerilor pe piața muncii</p>
+                    </div>
+                    <div class="card positive">
+                        <h3>✅ CU Reformă Educațională 2030</h3>
+                        <div class="big-number">32.0%</div>
+                        <p>Rata de ocupare</p>
+                        <div class="big-number">8.6%</div>
+                        <p>Rata de șomaj</p>
+                        <p style="margin-top: 15px; opacity: 0.9;">Atingerea obiectivului de sub 15% șomaj pentru tineri</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tab Impact Economic -->
+            <div id="impact" class="tab-content">
+                <div class="impact-grid">
+                    <div class="impact-card">
+                        <h3>Impact PIB Total</h3>
+                        <div class="value">22.7 mld</div>
+                        <div class="subtitle">lei (2022-2030)</div>
+                    </div>
+                    <div class="impact-card">
+                        <h3>Locuri de Muncă</h3>
+                        <div class="value">+170.000</div>
+                        <div class="subtitle">medie anuală suplimentară</div>
+                    </div>
+                    <div class="impact-card">
+                        <h3>ROI</h3>
+                        <div class="value">11.4x</div>
+                        <div class="subtitle">pentru fiecare leu investit</div>
+                    </div>
+                </div>
+                
+                <div class="analysis-section">
+                    <h3>💡 Beneficii Macroeconomice</h3>
+                    <ul class="benefits-list">
+                        <li><strong>Creșterea PIB-ului:</strong> Adicionalul de 22.7 miliarde lei reprezintă aproximativ 0.6% din PIB-ul României</li>
+                        <li><strong>Reducerea costurilor sociale:</strong> Economii de 408 milioane lei la ajutoarele de șomaj</li>
+                        <li><strong>Creșterea bazei fiscale:</strong> Aproximativ 662 milioane lei venituri fiscale suplimentare anual</li>
+                        <li><strong>Reducerea migrației:</strong> Menținerea tinerilor calificați în țară</li>
+                        <li><strong>Competitivitatea națională:</strong> Alinierea la standardele europene de ocupare</li>
+                    </ul>
+                </div>
+                
+                <div class="analysis-section" style="border-left-color: #ffc107; background: #fff8e1;">
+                    <h3 style="color: #ff8f00;">💸 Costuri vs Beneficii</h3>
+                    <p><strong>Investiție totală:</strong> ~2 miliarde lei</p>
+                    <ul style="margin: 15px 0; padding-left: 20px;">
+                        <li>Reforma curriculum-ului: 500 mil lei</li>
+                        <li>Parteneriate cu companii: 300 mil lei</li>
+                        <li>Infrastructură: 800 mil lei</li>
+                        <li>Programe practică: 400 mil lei</li>
+                    </ul>
+                    <p><strong>Perioada de recuperare:</strong> 2.5 ani</p>
+                </div>
+            </div>
+            
+            <!-- Tab Analiză -->
+            <div id="analysis" class="tab-content">
+                <div class="analysis-section" style="border-left-color: #007bff;">
+                    <h3>🔬 Metodologia Simulării</h3>
+                    <p><strong>Date de bază:</strong> Rata de ocupare 15-74 ani pe grupe de vârstă (2016-2024)</p>
+                    <p><strong>Scenariul de referință:</strong> Implementarea reformei educaționale din 2022</p>
+                    <p><strong>Parametri cheie:</strong></p>
+                    <ul style="margin: 10px 0; padding-left: 20px;">
+                        <li>Rata de participare pe piața muncii: 35% pentru grupa 15-24 ani</li>
+                        <li>Efectul reformei: creștere de 1.8% anual a ratei de ocupare</li>
+                        <li>Multiplicatorul PIB: 2.1x pentru fiecare loc de muncă suplimentar</li>
+                    </ul>
+                </div>
+                
+                <div class="analysis-section" style="border-left-color: #dc3545; background: #ffebee;">
+                    <h3 style="color: #c62828;">⚠️ Riscuri fără Reformă</h3>
+                    <ul class="risks-list">
+                        <li><strong>Șomajul structural:</strong> Menținerea unei rate ridicate de șomaj (peste 45%) în rândul tinerilor</li>
+                        <li><strong>Brain drain:</strong> Accelerarea emigrației tinerilor calificați către alte țări UE</li>
+                        <li><strong>Costuri sociale crescânde:</strong> Creșterea cheltuielilor cu ajutoarele sociale</li>
+                        <li><strong>Inadecvarea competențelor:</strong> Decalajul dintre educație și piața muncii se adâncește</li>
+                    </ul>
+                </div>
+                
+                <div class="analysis-section" style="border-left-color: #28a745; background: #e8f5e8;">
+                    <h3 style="color: #2e7d32;">✅ Beneficii cu Reformă</h3>
+                    <ul class="benefits-list">
+                        <li><strong>Alinierea la standardele UE:</strong> Reducerea șomajului tinerilor sub media europeană</li>
+                        <li><strong>Economia digitală:</strong> Pregătirea forței de muncă pentru transformarea digitală</li>
+                        <li><strong>Competitivitatea națională:</strong> Creșterea productivității și competitivității</li>
+                        <li><strong>Stabilitate socială:</strong> Reducerea tensiunilor sociale generate de șomaj</li>
+                    </ul>
+                </div>
+                
+                <div class="analysis-section" style="border-left-color: #9c27b0; background: #f3e5f5;">
+                    <h3 style="color: #7b1fa2;">🎯 Concluzia Simulării</h3>
+                    <p style="font-size: 1.1rem; line-height: 1.6;"><strong>Găsirea principală:</strong> Absența reformei ar fi dezastruoasă - șomajul tinerilor ar rămâne la aproape 50% în 2030, în timp cu implementarea reformei l-ar reduce la 8.6%.</p>
+                    <p style="margin-top: 15px; font-size: 1.1rem;"><strong>Magnitudinea impactului:</strong> 40.5 puncte procentuale diferență la șomaj și 22.7 miliarde lei pierdere economică fără reformă.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js">
+       
+    </script>
+</body>
+</html>
